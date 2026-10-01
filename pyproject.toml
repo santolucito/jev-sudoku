@@ -1,0 +1,24 @@
+[project]
+name = "jev-sudoku"
+version = "0.1.0"
+description = "Sudoku by lattice deduction (LDT-style) with TypeSafe Jev as the deduction step"
+readme = "README.md"
+authors = [
+    { name = "Mark Santolucito", email = "msantolu@barnard.edu" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "typesafe-sdk>=0.7.2",
+]
+
+[project.scripts]
+jev-sudoku = "jev_sudoku.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.10.4,<0.11.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
